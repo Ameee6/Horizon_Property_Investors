@@ -24,7 +24,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
             <button
               onClick={() => onNavigate('home')}
@@ -34,7 +34,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 <img 
                   src="/horizon_logo.svg" 
                   alt="Horizon Property Investors" 
-                  className="h-10 w-auto"
+                  className="h-20 w-auto"
                   loading="eager"
                   width="604"
                   height="278"

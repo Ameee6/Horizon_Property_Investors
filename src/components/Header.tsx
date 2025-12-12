@@ -34,7 +34,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 <img 
                   src="/horizon_logo.svg" 
                   alt="Horizon Property Investors" 
-                  className="h-10 w-auto"
+                  className="h-16 w-auto"
                   loading="eager"
                   width="604"
                   height="278"

@@ -112,8 +112,9 @@ export default function Home({ onNavigate }: HomeProps) {
 
   return (
     <div className="min-h-screen">
-      <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white py-20 lg:py-32">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
+      <section className="relative text-white py-20 lg:py-32">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-purple-700/35 to-indigo-900/40"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">

@@ -19,9 +19,9 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div>
             {!logoError ? (
               <img
-                src="/Horizon logo white.png"
+                src="/Horizon logo white large.png"
                 alt="Horizon Property Investors"
-                className="h-16 w-auto mb-4"
+                className="h-20 w-auto mb-4"
                 loading="lazy"
                 onError={handleLogoError}
               />

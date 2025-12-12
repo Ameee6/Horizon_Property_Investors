@@ -22,6 +22,9 @@ export default function Footer({ onNavigate }: FooterProps) {
                 src="/horizon_property_investors_image.png" 
                 alt="Horizon Property Investors" 
                 className="h-12 w-auto mb-4 brightness-0 invert opacity-90"
+                loading="lazy"
+                width="604"
+                height="278"
                 onError={handleLogoError}
               />
             ) : (

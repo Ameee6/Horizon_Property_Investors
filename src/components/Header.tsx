@@ -35,6 +35,9 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   src="/horizon_property_investors_image.png" 
                   alt="Horizon Property Investors" 
                   className="h-10 w-auto"
+                  loading="eager"
+                  width="604"
+                  height="278"
                   onError={handleLogoError}
                 />
               ) : (

@@ -1,11 +1,5 @@
 import { useState, FormEvent } from 'react';
 import { Phone, Mail, MapPin, CheckCircle, AlertCircle, Loader } from 'lucide-react';
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL || '',
-  import.meta.env.VITE_SUPABASE_ANON_KEY || ''
-);
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -58,11 +52,23 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
-        .from('contact_submissions')
-        .insert([formData]);
+      // Store submission in localStorage with timestamp
+      const submission = {
+        ...formData,
+        id: crypto.randomUUID(),
+        created_at: new Date().toISOString(),
+      };
 
-      if (error) throw error;
+      // Get existing submissions from localStorage
+      const existingSubmissions = localStorage.getItem('contact_submissions');
+      const submissions = existingSubmissions ? JSON.parse(existingSubmissions) : [];
+      
+      // Add new submission
+      submissions.push(submission);
+      localStorage.setItem('contact_submissions', JSON.stringify(submissions));
+
+      // Simulate network delay for better UX
+      await new Promise(resolve => setTimeout(resolve, 500));
 
       setSubmitStatus('success');
       setFormData({

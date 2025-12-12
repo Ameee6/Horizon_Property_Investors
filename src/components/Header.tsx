@@ -31,17 +31,17 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               className="flex items-center hover:opacity-80 transition-opacity"
             >
               {!logoError ? (
-                <img 
-                  src="/horizon_logo.svg" 
-                  alt="Horizon Property Investors" 
-                  className="h-10 w-auto"
+                <img
+                  src="/horizon_logo_white_bg.svg"
+                  alt="Horizon Property Investors"
+                  className="h-12 w-auto"
                   loading="eager"
                   width="604"
                   height="278"
                   onError={handleLogoError}
                 />
               ) : (
-                <span className="text-xl font-bold text-navy-700">
+                <span className="text-xl font-bold text-pink-600">
                   Horizon Property Investors
                 </span>
               )}
@@ -55,8 +55,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                 onClick={() => onNavigate(item.id)}
                 className={`text-sm font-medium transition-colors ${
                   currentPage === item.id
-                    ? 'text-navy-700 border-b-2 border-gold-500'
-                    : 'text-gray-700 hover:text-navy-700'
+                    ? 'text-pink-600 border-b-2 border-pink-500'
+                    : 'text-gray-700 hover:text-pink-600'
                 }`}
               >
                 {item.name}
@@ -64,7 +64,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             ))}
             <button
               onClick={() => onNavigate('contact')}
-              className="bg-gold-500 text-white px-6 py-2 rounded-full font-medium hover:bg-gold-600 transition-colors shadow-md"
+              className="bg-pink-500 text-white px-6 py-2 rounded-full font-medium hover:bg-pink-600 transition-colors shadow-md"
             >
               Get a Cash Offer
             </button>
@@ -73,7 +73,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 hover:text-navy-700"
+              className="text-gray-700 hover:text-pink-600"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -92,8 +92,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   }}
                   className={`text-left px-4 py-2 text-sm font-medium transition-colors ${
                     currentPage === item.id
-                      ? 'text-navy-700 bg-gold-50 rounded'
-                      : 'text-gray-700 hover:text-navy-700'
+                      ? 'text-pink-600 bg-pink-50 rounded'
+                      : 'text-gray-700 hover:text-pink-600'
                   }`}
                 >
                   {item.name}
@@ -104,7 +104,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                   onNavigate('contact');
                   setMobileMenuOpen(false);
                 }}
-                className="bg-gold-500 text-white px-6 py-3 rounded-full font-medium hover:bg-gold-600 transition-colors shadow-md text-center mx-4"
+                className="bg-pink-500 text-white px-6 py-3 rounded-full font-medium hover:bg-pink-600 transition-colors shadow-md text-center mx-4"
               >
                 Get a Cash Offer
               </button>

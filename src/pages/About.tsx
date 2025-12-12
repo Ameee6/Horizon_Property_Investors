@@ -80,7 +80,7 @@ export default function About({ onNavigate }: AboutProps) {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-gold-50 to-navy-50">
+      <section className="py-16 bg-gradient-to-br from-pink-50 to-navy-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mb-4">Our Mission</h2>
@@ -96,8 +96,8 @@ export default function About({ onNavigate }: AboutProps) {
                 className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gold-100 p-3 rounded-lg flex-shrink-0">
-                    <item.icon className="text-gold-600" size={28} />
+                  <div className="bg-pink-100 p-3 rounded-lg flex-shrink-0">
+                    <item.icon className="text-pink-600" size={28} />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-navy-800 mb-2">{item.title}</h3>
@@ -126,7 +126,7 @@ export default function About({ onNavigate }: AboutProps) {
                 className="text-center"
               >
                 <div className="bg-gradient-to-br from-navy-600 to-navy-700 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <value.icon className="text-gold-400" size={36} />
+                  <value.icon className="text-pink-400" size={36} />
                 </div>
                 <h3 className="text-xl font-semibold text-navy-800 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
@@ -147,7 +147,7 @@ export default function About({ onNavigate }: AboutProps) {
             </p>
             <button
               onClick={() => onNavigate('contact')}
-              className="bg-gold-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-flex items-center"
+              className="bg-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-flex items-center"
             >
               Contact Us to See How We Can Help
               <ArrowRight className="ml-2" size={24} />

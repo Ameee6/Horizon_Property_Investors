@@ -41,7 +41,7 @@ export default function HowItWorks({ onNavigate }: HowItWorksProps) {
       description: 'Transparent, no-obligation offer based on local market and condition.',
       details:
         'After reviewing your property, we\'ll present you with a fair cash offer. Our offers are based on current market conditions, the property\'s condition, and local comps. There\'s no obligation — take your time to consider it.',
-      color: 'from-gold-500 to-gold-600',
+      color: 'from-pink-500 to-pink-600',
     },
     {
       number: 4,
@@ -50,7 +50,7 @@ export default function HowItWorks({ onNavigate }: HowItWorksProps) {
       description: 'Fast closing or extra time if needed.',
       details:
         'If you accept our offer, you choose when to close. Need to move out quickly? We can close in as little as 7 days. Need more time to plan your move? No problem — we work on your timeline.',
-      color: 'from-gold-600 to-gold-700',
+      color: 'from-pink-600 to-pink-700',
     },
     {
       number: 5,
@@ -83,7 +83,7 @@ export default function HowItWorks({ onNavigate }: HowItWorksProps) {
                 className="relative"
               >
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute left-12 top-24 w-0.5 h-32 bg-gradient-to-b from-gold-400 to-navy-400"></div>
+                  <div className="hidden md:block absolute left-12 top-24 w-0.5 h-32 bg-gradient-to-b from-pink-400 to-navy-400"></div>
                 )}
 
                 <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -93,7 +93,7 @@ export default function HowItWorks({ onNavigate }: HowItWorksProps) {
 
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="bg-gold-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
+                      <span className="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
                         {step.number}
                       </span>
                       <h2 className="text-2xl md:text-3xl font-bold text-navy-800">
@@ -114,11 +114,11 @@ export default function HowItWorks({ onNavigate }: HowItWorksProps) {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-gold-50 to-navy-50 py-16">
+      <section className="bg-gradient-to-br from-pink-50 to-navy-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="text-center mb-8">
-              <Handshake className="text-gold-600 mx-auto mb-4" size={48} />
+              <Handshake className="text-pink-600 mx-auto mb-4" size={48} />
               <h2 className="text-3xl font-bold text-navy-800 mb-4">
                 No Pressure, Just Solutions
               </h2>
@@ -148,7 +148,7 @@ export default function HowItWorks({ onNavigate }: HowItWorksProps) {
             <div className="text-center">
               <button
                 onClick={() => onNavigate('contact')}
-                className="bg-gold-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-flex items-center"
+                className="bg-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-flex items-center"
               >
                 Start the Process
                 <ArrowRight className="ml-2" size={24} />

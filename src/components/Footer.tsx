@@ -18,17 +18,17 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             {!logoError ? (
-              <img 
-                src="/horizon_logo.svg" 
-                alt="Horizon Property Investors" 
-                className="h-12 w-auto mb-4 brightness-0 invert opacity-90"
+              <img
+                src="/horizon_property_investors.svg"
+                alt="Horizon Property Investors"
+                className="h-16 w-auto mb-4"
                 loading="lazy"
                 width="604"
                 height="278"
                 onError={handleLogoError}
               />
             ) : (
-              <h3 className="text-xl font-bold mb-4 text-gold-400">
+              <h3 className="text-xl font-bold mb-4 text-pink-400">
                 Horizon Property Investors
               </h3>
             )}
@@ -38,29 +38,29 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-gold-400">Quick Links</h4>
+            <h4 className="font-semibold mb-4 text-pink-400">Quick Links</h4>
             <div className="flex flex-col space-y-2">
               <button
                 onClick={() => onNavigate('home')}
-                className="text-gray-300 hover:text-gold-400 transition-colors text-left text-sm"
+                className="text-gray-300 hover:text-pink-400 transition-colors text-left text-sm"
               >
                 Home
               </button>
               <button
                 onClick={() => onNavigate('how-it-works')}
-                className="text-gray-300 hover:text-gold-400 transition-colors text-left text-sm"
+                className="text-gray-300 hover:text-pink-400 transition-colors text-left text-sm"
               >
                 How It Works
               </button>
               <button
                 onClick={() => onNavigate('about')}
-                className="text-gray-300 hover:text-gold-400 transition-colors text-left text-sm"
+                className="text-gray-300 hover:text-pink-400 transition-colors text-left text-sm"
               >
                 About Us
               </button>
               <button
                 onClick={() => onNavigate('contact')}
-                className="text-gray-300 hover:text-gold-400 transition-colors text-left text-sm"
+                className="text-gray-300 hover:text-pink-400 transition-colors text-left text-sm"
               >
                 Contact
               </button>
@@ -68,18 +68,18 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-gold-400">Contact Us</h4>
+            <h4 className="font-semibold mb-4 text-pink-400">Contact Us</h4>
             <div className="flex flex-col space-y-3">
               <a
                 href="tel:+15551234567"
-                className="flex items-center text-gray-300 hover:text-gold-400 transition-colors text-sm"
+                className="flex items-center text-gray-300 hover:text-pink-400 transition-colors text-sm"
               >
                 <Phone size={16} className="mr-2" />
                 (555) 123-4567
               </a>
               <a
                 href="mailto:info@horizonpropertyinvestors.com"
-                className="flex items-center text-gray-300 hover:text-gold-400 transition-colors text-sm"
+                className="flex items-center text-gray-300 hover:text-pink-400 transition-colors text-sm"
               >
                 <Mail size={16} className="mr-2" />
                 info@horizonpropertyinvestors.com

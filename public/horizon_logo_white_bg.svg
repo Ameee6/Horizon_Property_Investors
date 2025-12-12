@@ -1,0 +1,50 @@
+<svg width="604" height="278" viewBox="0 0 604 278" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background for header -->
+  <rect width="604" height="278" fill="white"/>
+
+  <!-- Large circular swirl -->
+  <g opacity="1">
+    <!-- Outer arc - top left to right -->
+    <path d="M 30 40 Q 80 -10, 150 30 Q 180 50, 170 85"
+          fill="none" stroke="#FF1493" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Bottom swirl curve -->
+    <path d="M 35 200 Q 20 220, 50 235 Q 90 250, 140 235 Q 180 220, 160 200"
+          fill="none" stroke="#FF1493" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Inner connecting swirl -->
+    <path d="M 170 85 Q 165 120, 130 145 Q 90 165, 60 145 Q 35 125, 40 100 Q 45 75, 60 65"
+          fill="none" stroke="#FF1493" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <!-- House icon -->
+  <g transform="translate(60, 80)">
+    <!-- Roof -->
+    <path d="M 15 25 L 45 5 L 75 25 Z" fill="#FF1493"/>
+    <!-- Body -->
+    <rect x="20" y="25" width="50" height="45" fill="#FF1493"/>
+    <!-- Windows -->
+    <rect x="28" y="33" width="12" height="12" fill="white"/>
+    <rect x="50" y="33" width="12" height="12" fill="white"/>
+    <!-- Door -->
+    <rect x="38" y="52" width="14" height="18" fill="white"/>
+  </g>
+
+  <!-- Wave designs at bottom -->
+  <path d="M 30 240 Q 55 235, 80 240 Q 105 245, 130 240 Q 155 235, 180 240"
+        fill="none" stroke="#FF1493" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 35 252 Q 60 247, 85 252 Q 110 257, 135 252 Q 160 247, 185 252"
+        fill="none" stroke="#FF1493" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 40 264 Q 65 259, 90 264 Q 115 269, 140 264"
+        fill="none" stroke="#FF1493" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Text: HORIZON -->
+  <text x="220" y="115" font-family="'Impact', 'Arial Black', sans-serif" font-size="68" font-weight="900" fill="#FF1493" letter-spacing="4">
+    HORIZON
+  </text>
+
+  <!-- Text: PROPERTY INVESTORS -->
+  <text x="220" y="155" font-family="'Arial', sans-serif" font-size="30" font-weight="700" fill="#FF1493" letter-spacing="8">
+    PROPERTY INVESTORS
+  </text>
+</svg>

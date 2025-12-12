@@ -52,16 +52,43 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
+      // Generate a unique ID (with fallback for older browsers)
+      const generateId = () => {
+        if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+          return crypto.randomUUID();
+        }
+        // Fallback UUID v4 implementation
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+          const r = Math.random() * 16 | 0;
+          const v = c === 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+      };
+
       // Store submission in localStorage with timestamp
       const submission = {
         ...formData,
-        id: crypto.randomUUID(),
+        id: generateId(),
         created_at: new Date().toISOString(),
       };
 
       // Get existing submissions from localStorage
       const existingSubmissions = localStorage.getItem('contact_submissions');
-      const submissions = existingSubmissions ? JSON.parse(existingSubmissions) : [];
+      let submissions = [];
+      
+      // Safely parse existing submissions
+      if (existingSubmissions) {
+        try {
+          submissions = JSON.parse(existingSubmissions);
+          // Validate it's an array
+          if (!Array.isArray(submissions)) {
+            submissions = [];
+          }
+        } catch (parseError) {
+          console.error('Error parsing existing submissions, starting fresh:', parseError);
+          submissions = [];
+        }
+      }
       
       // Add new submission
       submissions.push(submission);

@@ -1,18 +1,37 @@
 import { Mail, Phone } from 'lucide-react';
+import { useState } from 'react';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
+  const [logoError, setLogoError] = useState(false);
+
+  const handleLogoError = () => {
+    setLogoError(true);
+  };
+
   return (
     <footer className="bg-navy-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-gold-400">
-              Horizon Property Investors
-            </h3>
+            {!logoError ? (
+              <img 
+                src="/horizon_property_investors_image.png" 
+                alt="Horizon Property Investors" 
+                className="h-12 w-auto mb-4 brightness-0 invert opacity-90"
+                loading="lazy"
+                width="604"
+                height="278"
+                onError={handleLogoError}
+              />
+            ) : (
+              <h3 className="text-xl font-bold mb-4 text-gold-400">
+                Horizon Property Investors
+              </h3>
+            )}
             <p className="text-gray-300 text-sm">
               Helping homeowners find real solutions with honesty, clarity, and compassion.
             </p>

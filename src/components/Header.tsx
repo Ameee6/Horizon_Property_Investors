@@ -8,6 +8,11 @@ interface HeaderProps {
 
 export default function Header({ currentPage, onNavigate }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
+
+  const handleLogoError = () => {
+    setLogoError(true);
+  };
 
   const navigation = [
     { name: 'Home', id: 'home' },
@@ -23,9 +28,23 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           <div className="flex items-center">
             <button
               onClick={() => onNavigate('home')}
-              className="text-xl font-bold text-navy-700 hover:text-navy-900 transition-colors"
+              className="flex items-center hover:opacity-80 transition-opacity"
             >
-              Horizon Property Investors
+              {!logoError ? (
+                <img 
+                  src="/horizon_property_investors_image.png" 
+                  alt="Horizon Property Investors" 
+                  className="h-10 w-auto"
+                  loading="eager"
+                  width="604"
+                  height="278"
+                  onError={handleLogoError}
+                />
+              ) : (
+                <span className="text-xl font-bold text-navy-700">
+                  Horizon Property Investors
+                </span>
+              )}
             </button>
           </div>
 

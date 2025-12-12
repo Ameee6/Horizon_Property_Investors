@@ -13,13 +13,13 @@ export default function Footer({ onNavigate }: FooterProps) {
   };
 
   return (
-    <footer className="bg-navy-800 text-white">
+    <footer className="bg-gradient-to-br from-slate-700 via-purple-900 to-slate-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             {!logoError ? (
               <img
-                src="/horizon-logo-pink.png"
+                src="/Horizon logo white.png"
                 alt="Horizon Property Investors"
                 className="h-16 w-auto mb-4"
                 loading="lazy"

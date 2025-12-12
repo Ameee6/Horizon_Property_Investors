@@ -124,7 +124,7 @@ export default function Home({ onNavigate }: HomeProps) {
             </p>
             <button
               onClick={() => onNavigate('contact')}
-              className="bg-gold-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="bg-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Get Your Cash Offer
             </button>
@@ -147,7 +147,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {painPoints.map((point, index) => (
               <div
                 key={index}
-                className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-gold-400 hover:shadow-lg transition-all"
+                className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-pink-400 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start space-x-4">
                   <div className="bg-navy-100 p-3 rounded-lg">
@@ -164,7 +164,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-navy-50 to-gold-50">
+      <section className="py-16 bg-gradient-to-br from-navy-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mb-4">
@@ -179,9 +179,9 @@ export default function Home({ onNavigate }: HomeProps) {
             {howItWorksSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <step.icon className="text-gold-600" size={32} />
+                  <step.icon className="text-pink-600" size={32} />
                 </div>
-                <div className="bg-gold-500 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-4 font-bold">
+                <div className="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-4 font-bold">
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold text-navy-800 mb-2">{step.title}</h3>
@@ -193,7 +193,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="text-center">
             <button
               onClick={() => onNavigate('how-it-works')}
-              className="text-navy-700 font-semibold hover:text-gold-600 transition-colors inline-flex items-center"
+              className="text-navy-700 font-semibold hover:text-pink-600 transition-colors inline-flex items-center"
             >
               Learn More About Our Process
               <ClipboardList className="ml-2" size={20} />
@@ -217,10 +217,10 @@ export default function Home({ onNavigate }: HomeProps) {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-white to-gold-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-gold-200"
+                className="bg-gradient-to-br from-white to-pink-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-pink-200"
               >
                 <div className="bg-navy-700 p-3 rounded-lg w-fit mb-4">
-                  <benefit.icon className="text-gold-400" size={28} />
+                  <benefit.icon className="text-pink-400" size={28} />
                 </div>
                 <h3 className="text-xl font-semibold text-navy-800 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -240,7 +240,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="bg-gold-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-flex items-center"
+            className="bg-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-flex items-center"
           >
             Contact Us
             <CheckCircle className="ml-2" size={24} />

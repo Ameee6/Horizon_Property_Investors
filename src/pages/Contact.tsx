@@ -165,14 +165,14 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gold-100 p-3 rounded-lg">
-                    <Phone className="text-gold-600" size={24} />
+                  <div className="bg-pink-100 p-3 rounded-lg">
+                    <Phone className="text-pink-600" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-800 mb-1">Phone</h3>
                     <a
                       href="tel:+15551234567"
-                      className="text-gray-600 hover:text-gold-600 transition-colors"
+                      className="text-gray-600 hover:text-pink-600 transition-colors"
                     >
                       (555) 123-4567
                     </a>
@@ -180,14 +180,14 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gold-100 p-3 rounded-lg">
-                    <Mail className="text-gold-600" size={24} />
+                  <div className="bg-pink-100 p-3 rounded-lg">
+                    <Mail className="text-pink-600" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-800 mb-1">Email</h3>
                     <a
                       href="mailto:info@horizonpropertyinvestors.com"
-                      className="text-gray-600 hover:text-gold-600 transition-colors"
+                      className="text-gray-600 hover:text-pink-600 transition-colors"
                     >
                       info@horizonpropertyinvestors.com
                     </a>
@@ -195,8 +195,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gold-100 p-3 rounded-lg">
-                    <MapPin className="text-gold-600" size={24} />
+                  <div className="bg-pink-100 p-3 rounded-lg">
+                    <MapPin className="text-pink-600" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-800 mb-1">Service Area</h3>
@@ -207,23 +207,23 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="mt-8 bg-gradient-to-br from-navy-50 to-gold-50 rounded-xl p-6">
+              <div className="mt-8 bg-gradient-to-br from-navy-50 to-pink-50 rounded-xl p-6">
                 <h3 className="font-semibold text-navy-800 mb-3">What to Expect</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
-                    <CheckCircle className="text-gold-600 mr-2 flex-shrink-0 mt-0.5" size={20} />
+                    <CheckCircle className="text-pink-600 mr-2 flex-shrink-0 mt-0.5" size={20} />
                     <span>Response within 24 hours</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-gold-600 mr-2 flex-shrink-0 mt-0.5" size={20} />
+                    <CheckCircle className="text-pink-600 mr-2 flex-shrink-0 mt-0.5" size={20} />
                     <span>Brief, friendly conversation about your property</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-gold-600 mr-2 flex-shrink-0 mt-0.5" size={20} />
+                    <CheckCircle className="text-pink-600 mr-2 flex-shrink-0 mt-0.5" size={20} />
                     <span>No-obligation cash offer if we're a good fit</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-gold-600 mr-2 flex-shrink-0 mt-0.5" size={20} />
+                    <CheckCircle className="text-pink-600 mr-2 flex-shrink-0 mt-0.5" size={20} />
                     <span>Zero pressure to accept</span>
                   </li>
                 </ul>
@@ -242,7 +242,7 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 transition-colors ${
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors ${
                       errors.name ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="John Smith"
@@ -265,7 +265,7 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 transition-colors ${
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors ${
                       errors.phone ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="(555) 123-4567"
@@ -288,7 +288,7 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 transition-colors ${
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors ${
                       errors.email ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="john@example.com"
@@ -311,7 +311,7 @@ export default function Contact() {
                     name="property_address"
                     value={formData.property_address}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 transition-colors ${
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors ${
                       errors.property_address ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="123 Main St, City, State ZIP"
@@ -334,7 +334,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors resize-none"
                     placeholder="Share any details that would help us understand your needs..."
                   />
                 </div>
@@ -362,7 +362,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gold-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-600 transition-all shadow-lg hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center"
+                  className="w-full bg-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>

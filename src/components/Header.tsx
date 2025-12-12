@@ -23,9 +23,16 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           <div className="flex items-center">
             <button
               onClick={() => onNavigate('home')}
-              className="text-xl font-bold text-navy-700 hover:text-navy-900 transition-colors"
+              className="flex items-center gap-3 hover:opacity-90 transition-opacity"
             >
-              Horizon Property Investors
+              <img 
+                src="/assets/branding/logo.png" 
+                alt="Horizon Property Investors Logo" 
+                className="h-10 w-auto"
+              />
+              <span className="text-xl font-bold text-navy-700">
+                Horizon Property Investors
+              </span>
             </button>
           </div>
 

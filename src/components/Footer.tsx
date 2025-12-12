@@ -37,6 +37,8 @@ export default function Footer({ onNavigate }: FooterProps) {
               alt="Horizon Property Investors" 
               className="w-full max-w-xs mb-4 rounded-lg shadow-md"
               loading="lazy"
+              width="604"
+              height="278"
             />
             <p className="text-gray-300 text-sm">
               Helping homeowners find real solutions with honesty, clarity, and compassion.

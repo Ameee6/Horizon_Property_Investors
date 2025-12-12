@@ -32,12 +32,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             >
               {!logoError ? (
                 <img
-                  src="/horizon_logo_white_bg.svg"
+                  src="/horizon-logo-pink.png"
                   alt="Horizon Property Investors"
                   className="h-12 w-auto"
                   loading="eager"
-                  width="604"
-                  height="278"
                   onError={handleLogoError}
                 />
               ) : (

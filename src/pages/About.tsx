@@ -53,7 +53,7 @@ export default function About({ onNavigate }: AboutProps) {
 
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-navy-700 to-navy-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Committed to Helping Homeowners Find Real Solutions
@@ -136,7 +136,7 @@ export default function About({ onNavigate }: AboutProps) {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-navy-700 to-navy-900">
+      <section className="py-16 bg-gradient-to-br from-slate-700 via-purple-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-center border border-white/20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

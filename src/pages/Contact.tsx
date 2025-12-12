@@ -1,6 +1,9 @@
 import { useState, FormEvent } from 'react';
 import { Phone, Mail, MapPin, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 
+// Maximum number of submissions to keep when localStorage quota is exceeded
+const MAX_SUBMISSIONS_AFTER_CLEANUP = 10;
+
 // Generate a unique ID (with fallback for older browsers)
 const generateId = () => {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
@@ -102,8 +105,8 @@ export default function Contact() {
             (storageError.name === 'QuotaExceededError' || 
              storageError.name === 'NS_ERROR_DOM_QUOTA_REACHED')) {
           console.error('localStorage quota exceeded, keeping only recent submissions');
-          // Keep only the last 10 submissions and try again
-          const recentSubmissions = submissions.slice(-10);
+          // Keep only the most recent submissions and try again
+          const recentSubmissions = submissions.slice(-MAX_SUBMISSIONS_AFTER_CLEANUP);
           localStorage.setItem('contact_submissions', JSON.stringify(recentSubmissions));
         } else {
           throw storageError;

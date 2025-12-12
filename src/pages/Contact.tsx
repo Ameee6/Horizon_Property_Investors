@@ -1,6 +1,19 @@
 import { useState, FormEvent } from 'react';
 import { Phone, Mail, MapPin, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 
+// Generate a unique ID (with fallback for older browsers)
+const generateId = () => {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+  // Fallback UUID v4 implementation
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+};
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -52,19 +65,6 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Generate a unique ID (with fallback for older browsers)
-      const generateId = () => {
-        if (typeof crypto !== 'undefined' && crypto.randomUUID) {
-          return crypto.randomUUID();
-        }
-        // Fallback UUID v4 implementation
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-          const r = Math.random() * 16 | 0;
-          const v = c === 'x' ? r : (r & 0x3 | 0x8);
-          return v.toString(16);
-        });
-      };
-
       // Store submission in localStorage with timestamp
       const submission = {
         ...formData,
@@ -92,7 +92,23 @@ export default function Contact() {
       
       // Add new submission
       submissions.push(submission);
-      localStorage.setItem('contact_submissions', JSON.stringify(submissions));
+      
+      // Save to localStorage with quota error handling
+      try {
+        localStorage.setItem('contact_submissions', JSON.stringify(submissions));
+      } catch (storageError) {
+        // Handle storage quota exceeded or other localStorage errors
+        if (storageError instanceof DOMException && 
+            (storageError.name === 'QuotaExceededError' || 
+             storageError.name === 'NS_ERROR_DOM_QUOTA_REACHED')) {
+          console.error('localStorage quota exceeded, keeping only recent submissions');
+          // Keep only the last 10 submissions and try again
+          const recentSubmissions = submissions.slice(-10);
+          localStorage.setItem('contact_submissions', JSON.stringify(recentSubmissions));
+        } else {
+          throw storageError;
+        }
+      }
 
       // Simulate network delay for better UX
       await new Promise(resolve => setTimeout(resolve, 500));

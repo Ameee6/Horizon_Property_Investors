@@ -1,30 +1,48 @@
 <svg width="604" height="278" viewBox="0 0 604 278" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
   <rect width="604" height="278" fill="white"/>
-  
-  <!-- Horizon Icon - Stylized house with sun -->
-  <g transform="translate(30, 50)">
-    <!-- Sun/Horizon rays -->
-    <circle cx="60" cy="60" r="35" fill="#D4AF37" opacity="0.2"/>
-    <circle cx="60" cy="60" r="25" fill="#D4AF37"/>
-    
-    <!-- House shape -->
-    <path d="M 30 80 L 60 50 L 90 80 L 90 110 L 30 110 Z" fill="#1e3a5f" stroke="#D4AF37" stroke-width="2"/>
-    <rect x="50" y="90" width="20" height="20" fill="#D4AF37"/>
+
+  <!-- Circular swirl design - top -->
+  <path d="M 45 50 Q 30 70, 50 90 Q 70 100, 90 85 Q 100 70, 85 55 Q 70 45, 50 50"
+        fill="none" stroke="#C75B7A" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Circular swirl design - bottom -->
+  <path d="M 35 160 Q 20 180, 40 200 Q 80 220, 120 200 Q 140 180, 120 160"
+        fill="none" stroke="#C75B7A" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Additional decorative swirl -->
+  <path d="M 55 165 Q 70 175, 85 165 Q 95 155, 85 145"
+        fill="none" stroke="#D4729B" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- House icon with pink accent -->
+  <g transform="translate(45, 95)">
+    <!-- Roof -->
+    <path d="M 5 25 L 35 0 L 65 25 Z" fill="#1e3a5f"/>
+    <!-- House body -->
+    <rect x="15" y="25" width="40" height="30" fill="#1e3a5f"/>
+    <!-- Door -->
+    <rect x="28" y="38" width="14" height="17" fill="#C75B7A"/>
+    <!-- Window -->
+    <rect x="20" y="30" width="8" height="8" fill="white" opacity="0.8"/>
+    <rect x="42" y="30" width="8" height="8" fill="white" opacity="0.8"/>
   </g>
-  
+
+  <!-- Wave design elements -->
+  <path d="M 20 215 Q 40 210, 60 215 T 100 215 T 140 215"
+        fill="none" stroke="#D4729B" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 25 225 Q 50 220, 75 225 T 125 225"
+        fill="none" stroke="#C75B7A" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
   <!-- Text: HORIZON -->
-  <text x="150" y="100" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#1e3a5f">
+  <text x="170" y="100" font-family="'Arial', 'Helvetica', sans-serif" font-size="54" font-weight="bold" fill="#1e3a5f">
     HORIZON
   </text>
-  
+
   <!-- Text: PROPERTY INVESTORS -->
-  <text x="150" y="140" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#D4AF37" letter-spacing="2">
+  <text x="170" y="140" font-family="'Arial', 'Helvetica', sans-serif" font-size="26" font-weight="600" fill="#C75B7A" letter-spacing="3">
     PROPERTY INVESTORS
   </text>
-  
-  <!-- Tagline -->
-  <text x="150" y="170" font-family="Arial, sans-serif" font-size="16" fill="#666666" font-style="italic">
-    Your Trusted Home Buying Partner
-  </text>
+
+  <!-- Decorative underline -->
+  <line x1="170" y1="148" x2="570" y2="148" stroke="#D4729B" stroke-width="2" opacity="0.4"/>
 </svg>
